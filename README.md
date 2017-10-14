@@ -18,3 +18,9 @@ x为单词（向量表示），h根据上一时刻的h求得（h0来自视频信
 改进点：
   encoder部分使用LSTM无法解释，可以改进
   decoder部分softmax中的loss和实际语言模型关系不密切，可以改进
+
+Decoder部分：
+  X(初始) = CNN(I)
+  Xt = We * St (We:WordEmbeding St:One_Hot???)
+  Pt-1 = LSTM(Xt) (Xt为每个时刻的LSTM输入)
+
